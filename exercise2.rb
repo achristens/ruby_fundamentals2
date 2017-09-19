@@ -28,6 +28,16 @@ elsif drama_rating >= 4 && doc_rating < 4 && comedy_rating < 4
 elsif comedy_rating >= 4 && doc_rating < 4 && drama_rating < 4
   puts "You should watch #{comedy}"
 
+#STRETCH if no genre is higher than 3, BUT one genres is higher than the others, recommend that one
+elsif doc_rating <= 3 && comedy_rating <= 3 && drama_rating <= 3
+  if doc_rating > (comedy_rating && drama_rating)
+    puts "You should watch #{documentary}"
+  elsif comedy_rating > (doc_rating && drama_rating)
+    puts "You should watch #{comedy}"
+  elsif drama_rating > (doc_rating && comedy_rating)
+    puts "You should watch #{drama}"
+  end
+  
 #otherwise recommend the book
 else
   puts "Try reading The Orenda by Joseph Boyden"
